@@ -16,7 +16,7 @@ print(X.shape)#shows matrix shape
 n=len(X)
 #print n
 X=X.reshape(n,-1)
-print(X.shape)
+#print(X.shape)
 X_train=X[:n//2]
 y_train=y[:n//2]
 X_test=X[n//2:]
@@ -25,17 +25,8 @@ model=SVC(gamma=0.001)
 model.fit(X_train,y_train)
 p=model.predict(X_test)
 
-print(y_train.shape)
-print(p.shape)
+#print(y_train.shape)
+#print(p.shape)
 c=classification_report(y_test,p)
 print(confusion_matrix(y_test,p))
 print(c)
-
-
-ilabels=list(zip(data.images[n//2:],p))
-for index,(image,label) in enumerate(ilabels[:4]):
-	plt.subplot(2,4,index+1)
-	plt.axis('off')
-	plt.imshow(image,cmap=plt.cm.gray_r,interplolation='nearest')
-	plt.title(label)
-plt.show()

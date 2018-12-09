@@ -1,9 +1,9 @@
-import cv2 as cv
-img1=cv.imread('/home/ai31/Desktop/common/ML/Day10/ml.png')
-img2=cv.imread('/home/ai31/Desktop/common/ML/Day10/opencv-logo.png')
+import cv2
+img1=cv2.imread('ml.png')
+img2=cv2.imread('opencv-logo.png')
 print(img1.shape)
 print(img2.shape)
-dst=cv.addWeighted(img1,0.7,img2,0.3,0)
-cv.imshow('dst',dst)
-cv.waitKey(0)
-cv.destrAllWindows()
+dst=cv2.addWeighted(img1,0.7,img2,0.3,0)
+cv2.imshow('dst',dst)
+cv2.waitKey(0)
+cv2.destroAllWindows()
